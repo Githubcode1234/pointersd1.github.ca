@@ -1,0 +1,23 @@
+# input number of items
+burgers = int(input("Input amount of burgers "))
+fries = int(input("Input amount of fries "))
+soda = int(input("Input amount of soda "))
+totalb = (burgers*1.99)
+totalf = (fries*1.79)
+totals = (soda*2.24)
+tax_free_total = (totalb+totalf+totals)
+tax = (tax_free_total*0.13)
+final_total = (tax_free_total+tax)
+print("Total before tax: $", round(tax_free_total,2))
+print("Tax: $", round(tax,2))
+print("Final Total: $",round(final_total,2))
+amount_tendered = float(input("Please enter tendered amount/Cash amount "))
+print("Your Change is: $",round(amount_tendered-final_total,2))
+if (final_total) > amount_tendered:
+    Morecash = float(input("Insert Cash in Numbers "))
+    Entered = (amount_tendered+Morecash)
+    print("You entered: $",Entered)
+    print("Your Change is: $",round(Entered-final_total,2)) 
+else:
+    print("Thank You")
+
